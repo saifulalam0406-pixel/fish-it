@@ -1,0 +1,128 @@
+:root {
+  --pink: #fcc204fd;
+  --pink-100: #000000;
+  --pink-200: #f8ab03;
+  --gray-50: #968181;
+  --gray-100: #000000;
+  --gray-300: #c9cbd3;  
+  --text: #000000;
+  --bg: #f8f3f8;
+  --accent: #f3a107;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: saturate(180%) blur(6px);
+  background: rgba(255,255,255,0.75);
+  border-bottom: 1px solid var(--gray-100);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.logo { font-weight: 700; letter-spacing: 0.2px; }
+.logo span { color: var(--accent); }
+.nav { display: flex; gap: 16px; align-items: center; }
+.nav a { text-decoration: none; color: var(--text); padding: 8px 10px; border-radius: 8px; }
+.nav a:hover { background: var(--gray-50); }
+
+.btn { appearance: none; border: none; outline: none; cursor: pointer; border-radius: 12px; padding: 10px 16px; font-weight: 600; }
+.btn.primary { background: var(--accent); color: white; box-shadow: 0 6px 14px rgba(255, 111, 163, 0.25); }
+.btn.primary:hover { transform: translateY(-1px); box-shadow: 0 10px 20px rgba(255, 111, 163, 0.3); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--gray-100); }
+.btn.ghost:hover { background: var(--gray-50); }
+
+.hero { background: linear-gradient(180deg, var(--pink-100), #fff); border-bottom: 1px solid var(--gray-100); }
+.hero-inner { display: grid; grid-template-columns: 1fr; gap: 12px; padding: 56px 0; }
+.hero-text h1 { margin: 0 0 12px; font-size: 2rem; }
+.hero-text p { margin: 0 0 20px; color: #4b4e57; }
+
+.products-section { padding: 32px 0 48px; }
+.products-section h2 { margin: 0 0 16px; }
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  border: 1px solid var(--gray-100);
+  border-radius: 16px;
+  background: white;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  animation: fadeInUp 400ms ease both;
+}
+.card:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(247, 168, 196, 0.18); }
+.card-img { width: 100%; aspect-ratio: 1/1; border-radius: 12px; overflow: hidden; background: var(--pink-100); display: grid; place-items: center; }
+.card-body { display: flex; flex-direction: column; gap: 6px; padding-top: 10px; }
+.price { font-weight: 700; color: #333; }
+.meta { font-size: 0.85rem; color: #666; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.stars { color: #f5a623; display: inline-flex; gap: 2px; }
+.actions { margin-top: 8px; display: flex; gap: 8px; }
+.btn.buy { background: var(--pink); color: #3a2e33; }
+.btn.detail { background: white; border: 1px solid var(--gray-100); }
+
+.about-section, .contact-section { padding: 24px 0 40px; border-top: 1px solid var(--gray-100); }
+
+.site-footer { border-top: 1px solid var(--gray-100); background: #fff; }
+.footer-inner { height: 64px; display: flex; align-items: center; justify-content: space-between; }
+.foot-links { display: flex; gap: 12px; }
+
+.modal { position: fixed; inset: 0; display: grid; place-items: center; }
+.modal[hidden] { display: none; }
+.modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.25); }
+.modal-content { position: relative; width: min(720px, calc(100% - 32px)); background: #fff; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.18); padding: 18px; border: 1px solid var(--gray-100); }
+.modal-close { position: absolute; right: 10px; top: 8px; border: none; background: transparent; font-size: 22px; cursor: pointer; }
+
+.detail-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.detail-img { border-radius: 14px; overflow: hidden; background: var(--pink-100); display: grid; place-items: center; }
+.detail-info { display: flex; flex-direction: column; gap: 10px; }
+.detail-actions { display: flex; gap: 8px; }
+
+.form { display: grid; gap: 10px; }
+.field { display: grid; gap: 6px; }
+.input, .select, .textarea { width: 100%; border: 1px solid var(--gray-100); border-radius: 10px; padding: 10px 12px; font: inherit; }
+.textarea { min-height: 92px; resize: vertical; }
+.order-item { border: 1px solid var(--gray-100); border-radius: 12px; padding: 12px; display: grid; gap: 8px; background: #fff; }
+.order-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.status-badge { border: 1px solid var(--gray-100); padding: 4px 8px; border-radius: 8px; font-size: 0.85rem; }
+
+.comment-list { display: grid; gap: 10px; }
+.comment-item { border: 1px solid var(--gray-100); border-radius: 12px; padding: 10px; display: grid; gap: 8px; }
+.comment-head { display: flex; align-items: center; justify-content: space-between; }
+.emoji-picker { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; padding: 8px; border: 1px solid var(--gray-100); border-radius: 10px; background: #fff; }
+.emoji-btn { font-size: 18px; line-height: 1; padding: 6px; border-radius: 8px; border: 1px solid transparent; background: #fff; cursor: pointer; }
+.emoji-btn:hover { border-color: var(--gray-100); background: var(--gray-50); }
+
+.admin-products { display: grid; gap: 10px; }
+.product-item { border: 1px solid var(--gray-100); border-radius: 12px; padding: 12px; display: grid; gap: 8px; background: #fff; }
+.product-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.img-preview { width: 72px; height: 72px; border-radius: 10px; object-fit: cover; border: 1px solid var(--gray-100); background: var(--gray-50); }
+.img-tools { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 760px) {
+  .detail-layout { grid-template-columns: 1fr; }
+  .header-inner { height: auto; padding: 10px 0; gap: 10px; flex-wrap: wrap; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card { animation: none; }
+  .btn.primary:hover { transform: none; }
+}
