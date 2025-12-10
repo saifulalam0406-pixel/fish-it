@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BossipullShop - Premium Black Gold</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">BossIpul<span>Shop</span></div>
+      <nav class="nav desktop-menu">
+        <a href="#hero">Home</a>
+        <a href="#produk">Produk</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#kontak">Kontak</a>
+        <button id="adminToggle" class="btn admin-btn">Admin</button>
+      </nav>
+      <button class="hamburger" id="hamburgerBtn">☰</button>
+    </div>
+  </header>
+
+  <aside id="sidebar" class="sidebar" hidden>
+    <div class="sidebar-header">Menu <button id="closeSidebar">×</button></div>
+    <a href="#hero">Home</a>
+    <a href="#produk">Produk</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#kontak">Kontak</a>
+  </aside>
+
+  <section id="hero" class="hero">
+    <div class="container hero-content">
+      <div class="hero-text" data-animate="fade-up">
+        <h1>PT Suyono Agro Nusantara</h1>
+        <p data-animate="fade-up" data-delay="150">
+          produk pertnian berkualitas untuk membentuk bibit unggul.
+        </p>
+        <button id="ctaBelanja" class="btn primary big" data-animate="fade-up" data-delay="300">Belanja Sekarang</button>
+      </div>
+
+      <div class="hero-image" data-animate="fade-left">
+        <img src="https://images.unsplash.com/photo-1600185366259-bdda3c8edb5e?q=80" alt="Pusat pertanian.ID" />
+      </div>
+    </div>
+  </section>
+
+  <section id="produk" class="products-section">
+    <div class="container">
+      <h2 data-animate="fade-up">Produk Pilihan</h2>
+
+      <div class="search-filter" data-animate="fade-up" data-delay="80">
+        <input type="text" id="searchInput" class="input" placeholder="Cari produk..." />
+        <select id="filterLocation" class="select">
+          <option value="all">Semua Lokasi</option>
+          <option value="Jakarta">Jakarta</option>
+          <option value="Bandung">Bandung</option>
+          <option value="Surabaya">Surabaya</option>
+          <option value="Medan">Medan</option>
+        </select>
+        <button class="btn primary" id="cartBtn">Keranjang (<span id="cartCount">0</span>)</button>
+      </div>
+
+      <div id="products-grid" class="products-grid" data-animate="fade-up" data-delay="150"></div>
+    </div>
+  </section>
+
+  <section id="tentang" class="about-section">
+    <div class="container about-grid">
+      <div class="about-text" data-animate="fade-right">
+        <h2>Tentang Kami</h2>
+        <p>Kami menghadirkan solusi agrikultur lengkap—mulai dari bibit unggul, nutrisi tanaman, hingga proteksi hama dan penyakit. Dengan standar kualitas tinggi dan teknologi pertanian modern, kami mendukung terciptanya pertanian Nusantara yang lebih efisien, produktif, dan berkelanjutan. Bersama para petani, kami membangun masa depan pertanian yang lebih maju—karena hasil terbaik dimulai dari pilihan terbaik.</p>
+      </div>
+
+      <div class="about-img" data-animate="fade-left">
+        <img src="https://images.unsplash.com/photo-1515165562835-c3b8e52f7a2e?q=80" alt="Tentang" />
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak" class="contact-section">
+    <div class="container contact-card" data-animate="fade-up">
+      <h2>Kontak</h2>
+      <p>Email: <a href="#">saifulalam.0406@gmail.com</a></p>
+      <p>WhatsApp: <a href="#">0821-1234-5678</a></p>
+      <p>Instagram: <a href="#">@ipul.anakpapa</a></p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      © <span id="year"></span> BossipulShop • Premium Interface
+    </div>
+  </footer>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
