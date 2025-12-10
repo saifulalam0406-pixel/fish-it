@@ -2,7 +2,7 @@
 let products = [
   { id:1, name:"kawul", price:450000, img:"images/harga-jerami.webp", seller:"bos endriensa", location:"JOMBANG" },
   { id:2, name:"benih jagung ayam jago", price:130000, img:"images/ayamjago.jpg", seller:"tuan muda Saiful", location:"J-team" },
-  { id:3, name:"benih jagung bisi 18", price:118000, img:"images/benih2.jpg", seller:"Tuan muda Saiful", location:"J-Team" },
+  { id:3, name:"benih jagung bisi 18", price:118000, img:"benih2.jpg", seller:"Tuan muda Saiful", location:"J-Team" },
   { id:4, name:"benih jagung sygenta", price:272000, img:"images/benih.jpg", seller:"tuan muda saiful", location:"J-Team" },
   { id:6, name:"beras super premium", price:1200000, img:"images/beras.jpg", seller:"Tuan muda saiful", location:"J-Team" },
   { id:7, name:"pupuk phonska", price:370000, img:"images/ponska.jpg", seller:"Tuan muda saiful", location:"J-Team" },
